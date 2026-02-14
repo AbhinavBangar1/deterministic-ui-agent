@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express'
-import { orchestrate, getCurrentUI, getVersionHistory, clearHistory } from '../orchestrator'
+import { orchestrate, getCurrentUI, getVersionHistory, clearHistory } from '../orchestrator.js'
 
 const router = express.Router()
 
