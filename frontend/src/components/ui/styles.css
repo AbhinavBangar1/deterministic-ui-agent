@@ -1,0 +1,36 @@
+/* Layout wrappers for generated UIs */
+
+.layout-single {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.layout-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.layout-three-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.layout-dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .layout-two-column,
+  .layout-three-column {
+    grid-template-columns: 1fr;
+  }
+}
