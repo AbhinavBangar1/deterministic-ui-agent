@@ -1,15 +1,15 @@
-import { COMPONENT_LIBRARY } from './types'
+import { COMPONENT_LIBRARY } from './types.js'
 
 export const PLANNER_PROMPT = `You are a UI Planner Agent. Your job is to convert natural language UI requests into structured JSON plans.
 
 CONSTRAINTS:
-- You MUST use ONLY components from this whitelist: ${COMPONENT_LIBRARY.components.map(c => c.name).join(', ')}
+- You MUST use ONLY components from this whitelist: ${COMPONENT_LIBRARY.components.map((c : any) => c.name).join(', ')}
 - You MUST use ONLY props that are allowed for each component
 - You MUST NOT create new components or use custom CSS
 - You MUST choose one of these layouts: dashboard, two-column, three-column, single
 
 ALLOWED COMPONENTS AND THEIR PROPS:
-${COMPONENT_LIBRARY.components.map(comp => 
+${COMPONENT_LIBRARY.components.map((comp: any) => 
   `- ${comp.name}: ${comp.allowedProps.join(', ')}`
 ).join('\n')}
 
@@ -118,12 +118,12 @@ export const MODIFICATION_PLANNER_PROMPT = `You are a UI Modification Planner. Y
 
 CONSTRAINTS:
 - You MUST preserve unchanged components (keep their IDs and structure)
-- You MUST use ONLY components from the whitelist: ${COMPONENT_LIBRARY.components.map(c => c.name).join(', ')}
+- You MUST use ONLY components from the whitelist: ${COMPONENT_LIBRARY.components.map((c : any) => c.name).join(', ')}
 - You MUST NOT do a full rewrite unless user explicitly says "rebuild from scratch"
 - You MUST explain what changed and what was preserved
 
 ALLOWED COMPONENTS AND THEIR PROPS:
-${COMPONENT_LIBRARY.components.map(comp => 
+${COMPONENT_LIBRARY.components.map((comp: any) => 
   `- ${comp.name}: ${comp.allowedProps.join(', ')}`
 ).join('\n')}
 

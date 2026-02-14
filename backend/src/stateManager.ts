@@ -1,4 +1,4 @@
-import { VersionState } from './types'
+import { VersionState } from './types.js'
 
 class StateManager {
   private history: VersionState[] = []

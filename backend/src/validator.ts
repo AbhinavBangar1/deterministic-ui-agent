@@ -1,4 +1,4 @@
-import { ComponentDef, StructuredPlan, COMPONENT_LIBRARY, AllowedComponent, ALLOWED_LAYOUTS } from './types'
+import { ComponentDef, StructuredPlan, COMPONENT_LIBRARY, AllowedComponent, ALLOWED_LAYOUTS } from './types.js'
 
 export interface ValidationResult {
   isValid: boolean

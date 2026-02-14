@@ -1,5 +1,5 @@
-import { StructuredPlan, VersionState } from './types'
-import { validatePlan, validateCode } from './validator'
+import { StructuredPlan, VersionState } from './types.js'
+import { validatePlan, validateCode } from './validator.js'
 import {
   PLANNER_PROMPT,
   CODE_GENERATOR_PROMPT,
@@ -9,9 +9,9 @@ import {
   buildModificationMessage,
   buildGeneratorMessage,
   buildExplainerMessage
-} from './prompts'
-import { stateManager } from './stateManager'
-import { callClaudeAPI } from './services/geminiClient'
+} from './prompts.js'
+import { stateManager } from './stateManager.js'
+import { callClaudeAPI } from './services/geminiClient.js'
 
 export interface OrchestratorResult {
   success: boolean
